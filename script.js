@@ -64,6 +64,7 @@ const setupGoogleForm = () => {
   } else if (googleFormLink) {
     googleFormLink.removeAttribute("target");
     googleFormLink.setAttribute("aria-disabled", "true");
+    googleFormLink.textContent = "Форма скоро появится";
   }
 
   if (googleFormEmbed && embedUrl && !embedUrl.includes("REPLACE_WITH")) {

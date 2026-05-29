@@ -27,6 +27,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
+    linear-gradient(rgba(255, 253, 249, 0.62), rgba(255, 253, 249, 0.62)),
     radial-gradient(circle at 16% 6%, rgba(213, 165, 157, 0.24), transparent 28%),
     radial-gradient(circle at 86% 22%, rgba(127, 146, 123, 0.2), transparent 30%),
     var(--paper);
@@ -134,7 +135,7 @@ a {
 
 .hero-media {
   background:
-    linear-gradient(90deg, rgba(31, 32, 35, 0.74), rgba(31, 32, 35, 0.18) 58%, rgba(31, 32, 35, 0.42)),
+    linear-gradient(90deg, rgba(31, 32, 35, 0.78), rgba(31, 32, 35, 0.24) 54%, rgba(31, 32, 35, 0.12)),
     url("assets/wedding-hero.png") center / cover;
   transform: scale(1.04);
   animation: slow-drift 18s ease-in-out infinite alternate;
@@ -143,7 +144,7 @@ a {
 .hero-scrim {
   background:
     radial-gradient(circle at 20% 24%, rgba(198, 154, 87, 0.28), transparent 30%),
-    linear-gradient(180deg, rgba(31, 32, 35, 0.12), rgba(31, 32, 35, 0.74));
+    linear-gradient(180deg, rgba(31, 32, 35, 0.08), rgba(31, 32, 35, 0.68));
 }
 
 .hero-content {
@@ -344,11 +345,56 @@ h3 {
 }
 
 .section {
+  position: relative;
   padding: clamp(78px, 12vw, 150px) clamp(20px, 7vw, 96px);
+}
+
+.botanical-cut {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: sepia(0.15);
+  opacity: 0.16;
+}
+
+.botanical-story {
+  top: 32px;
+  right: clamp(12px, 4vw, 70px);
+  width: min(32vw, 280px);
+  height: min(48vw, 420px);
+  background-image: url("assets/botanical/floral-line-2.png");
+}
+
+.botanical-schedule {
+  left: clamp(10px, 3vw, 52px);
+  bottom: 18px;
+  width: min(26vw, 220px);
+  height: min(42vw, 340px);
+  background-image: url("assets/botanical/floral-line-4.png");
+  opacity: 0.12;
+  transform: rotate(-8deg);
+}
+
+.botanical-place {
+  right: clamp(8px, 3vw, 50px);
+  bottom: 34px;
+  width: min(28vw, 240px);
+  height: min(46vw, 360px);
+  background-image: url("assets/botanical/floral-line-3.png");
+  opacity: 0.13;
+}
+
+.section > *:not(.botanical-cut) {
+  position: relative;
+  z-index: 1;
 }
 
 .story-section {
   background:
+    radial-gradient(circle at 85% 12%, rgba(213, 165, 157, 0.2), transparent 26%),
     linear-gradient(135deg, rgba(255, 253, 249, 0.88), rgba(251, 244, 239, 0.74)),
     var(--paper);
 }
@@ -374,6 +420,7 @@ h3 {
   padding: 36px clamp(20px, 7vw, 96px);
   color: var(--white);
   background:
+    url("assets/botanical/floral-line-1.png") right 8% center / 190px auto no-repeat,
     linear-gradient(90deg, rgba(107, 57, 65, 0.44), transparent),
     var(--charcoal);
 }
@@ -442,6 +489,12 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: rgba(107, 57, 65, 0.22);
+}
+
+.schedule-section {
+  background:
+    linear-gradient(180deg, rgba(255, 253, 249, 0.78), rgba(251, 244, 239, 0.84)),
+    var(--paper);
 }
 
 .timeline-item {
@@ -835,6 +888,10 @@ dd {
 
   .hero-flourish {
     display: none;
+  }
+
+  .botanical-cut {
+    opacity: 0.08;
   }
 
   .form-embed {

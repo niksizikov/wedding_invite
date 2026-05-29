@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Свадебное приглашение Марии и Ивана: дата, место, программа и RSVP."
+      content="Свадебное приглашение Елизаветы и Никиты: дата, ресторан Мишель, программа и анкета гостя через Google Forms."
     />
-    <title>Мария & Иван | Приглашение на свадьбу</title>
+    <title>Елизавета & Никита | Приглашение на свадьбу</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -19,65 +19,97 @@
   <body>
     <div class="site-shell">
       <header class="topbar" data-nav>
-        <a class="brand" href="#top" aria-label="К началу страницы">М & И</a>
+        <a class="brand" href="#top" aria-label="К началу страницы">Л · Н</a>
         <nav class="nav-links" aria-label="Разделы приглашения">
-          <a href="#story">История</a>
+          <a href="#concept">Концепция</a>
           <a href="#schedule">Программа</a>
           <a href="#place">Место</a>
-          <a href="#rsvp">RSVP</a>
+          <a href="#guest-form">Анкета гостя</a>
         </nav>
       </header>
 
       <main id="top">
         <section class="hero" aria-labelledby="hero-title">
           <div class="hero-media" aria-hidden="true"></div>
+          <div class="hero-grid" aria-hidden="true"></div>
           <div class="hero-scrim" aria-hidden="true"></div>
-          <div class="floating-petal petal-one" aria-hidden="true"></div>
-          <div class="floating-petal petal-two" aria-hidden="true"></div>
+          <div class="plan-mark mark-one" aria-hidden="true"></div>
+          <div class="plan-mark mark-two" aria-hidden="true"></div>
+
           <div class="hero-content">
-            <p class="eyebrow reveal">Сохрани этот день</p>
-            <h1 id="hero-title" class="reveal">Мария & Иван</h1>
-            <p class="hero-date reveal">18 июля 2026 · Москва</p>
+            <p class="eyebrow reveal">Wedding system · v 05.09.2026</p>
+            <h1 id="hero-title" class="reveal">Елизавета & Никита</h1>
+            <p class="hero-date reveal">5 сентября 2026 · Москва</p>
             <p class="hero-copy reveal">
-              Мы будем счастливы разделить с вами вечер, наполненный музыкой,
-              теплом, легким шампанским и моментом, с которого начинается наша
-              семейная история.
+              Архитектура пространства, точность решений и один вечер, где все
+              складывается в красивую общую картину. Мы будем счастливы видеть
+              вас рядом в день нашей свадьбы.
             </p>
             <div class="hero-actions reveal">
-              <a class="button primary" href="#rsvp">Подтвердить участие</a>
-              <a class="button ghost" href="#schedule">Посмотреть программу</a>
+              <a class="button primary" href="#guest-form">Заполнить анкету</a>
+              <a class="button ghost" href="#schedule">План вечера</a>
             </div>
           </div>
-          <a class="scroll-cue" href="#story" aria-label="Перейти к истории">
+
+          <aside class="hero-dashboard reveal" aria-label="Ключевые детали свадьбы">
+            <div>
+              <span>Дата</span>
+              <strong>05 · 09 · 26</strong>
+            </div>
+            <div>
+              <span>Главное</span>
+              <strong>Лиза и Никита собирают своих людей</strong>
+            </div>
+            <div>
+              <span>Формат</span>
+              <strong>Церемония · ужин · танцы</strong>
+            </div>
+          </aside>
+
+          <a class="scroll-cue" href="#concept" aria-label="Перейти к концепции">
             <span></span>
           </a>
         </section>
 
-        <section id="story" class="section intro-section">
-          <div class="section-kicker reveal">Наша история</div>
+        <section id="concept" class="section concept-section">
+          <div class="section-kicker reveal">Концепция</div>
           <div class="split-layout">
             <div class="section-heading reveal">
-              <h2>Один вечер, который хочется прожить рядом с вами.</h2>
+              <h2>Когда логика встречает форму, получается наш праздник.</h2>
             </div>
             <div class="section-text reveal">
               <p>
-                Мы мечтали о празднике без лишней суеты: красивое место, близкие
-                люди, живая музыка и много настоящих разговоров. Поэтому здесь
-                собрали все главное: когда приезжать, где встречаемся и как
-                подтвердить участие.
+                Лиза проектирует пространства, Никита помогает видеть структуру
+                в сложных задачах. Поэтому мы хотим, чтобы приглашение тоже
+                говорило на нашем языке: чистые линии, понятная навигация,
+                спокойная современная эстетика и немного романтики там, где она
+                действительно нужна.
               </p>
               <p>
-                Дресс-код, тайминг и детали можно будет легко обновлять по мере
-                подготовки. Эта страница уже готова к публикации на GitHub Pages.
+                Эта страница останется живой: сюда можно будет добавить финальный
+                адрес, ссылку на карту, дресс-код и Google Форму для ответов гостей.
               </p>
             </div>
+          </div>
+
+          <div class="roles-grid">
+            <article class="role-card reveal">
+              <span>01</span>
+              <h3>Елизавета</h3>
+              <p>Архитектор: линия, масштаб, свет и внимание к деталям.</p>
+            </article>
+            <article class="role-card reveal">
+              <span>02</span>
+              <h3>Никита</h3>
+              <p>Бизнес-аналитик: структура, ясность, решения и немного магии таблиц.</p>
+            </article>
           </div>
         </section>
 
         <section class="date-band" aria-label="Обратный отсчет">
           <div class="date-band-inner reveal">
             <p>До свадьбы осталось</p>
-            <div class="countdown" data-countdown="2026-07-18T16:00:00+03:00">
+            <div class="countdown" data-countdown="2026-09-05T16:00:00+03:00">
               <span><strong data-days>00</strong>дней</span>
               <span><strong data-hours>00</strong>часов</span>
               <span><strong data-minutes>00</strong>минут</span>
@@ -90,28 +122,28 @@
           <div class="section-kicker reveal">Программа</div>
           <div class="section-title-row reveal">
             <h2>План вечера</h2>
-            <p>Тайминг можно заменить на финальный, когда площадка подтвердит детали.</p>
+            <p>Время пока можно считать рабочей версией. Финальный тайминг уточним ближе к дате.</p>
           </div>
           <div class="timeline">
             <article class="timeline-item reveal">
               <time datetime="16:00">16:00</time>
               <h3>Сбор гостей</h3>
-              <p>Приветственный бокал, легкие закуски и первые фотографии.</p>
+              <p>Приветственный бокал, знакомство с площадкой и первые фотографии.</p>
             </article>
             <article class="timeline-item reveal">
               <time datetime="17:00">17:00</time>
               <h3>Церемония</h3>
-              <p>Тот самый момент, ради которого мы всех собираем.</p>
+              <p>Главная часть дня: коротко, красиво и очень по-настоящему.</p>
             </article>
             <article class="timeline-item reveal">
               <time datetime="18:00">18:00</time>
               <h3>Ужин</h3>
-              <p>Теплые тосты, сезонное меню и спокойная атмосфера.</p>
+              <p>Теплые слова, сезонное меню и время спокойно поговорить.</p>
             </article>
             <article class="timeline-item reveal">
               <time datetime="21:00">21:00</time>
               <h3>Танцы</h3>
-              <p>Музыка, свет, торт и вечер, который не хочется заканчивать.</p>
+              <p>Музыка, свет, торт и та часть вечера, где регламент становится мягче.</p>
             </article>
           </div>
         </section>
@@ -119,30 +151,39 @@
         <section id="place" class="section place-section">
           <div class="place-copy reveal">
             <p class="section-kicker">Место</p>
-            <h2>Усадьба «Светлый сад»</h2>
+            <h2>Ресторан «Мишель»</h2>
             <p>
-              Москва, ул. Цветочная, 18. Финальный адрес, схему проезда и ссылку
-              на карту можно поставить сюда, когда площадка будет утверждена.
+              Москва, улица Красная Пресня, 13. Вход в ресторан находится со
+              стороны Пресненского переулка. Ниже добавили карту, чтобы гостям
+              было удобно построить маршрут с телефона.
             </p>
-            <a class="text-link" href="https://maps.google.com" target="_blank" rel="noreferrer">
-              Открыть карту
+            <a class="text-link" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%20%D0%9F%D1%80%D0%B5%D1%81%D0%BD%D1%8F%2C%2013%2C%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%9C%D0%B8%D1%88%D0%B5%D0%BB%D1%8C" target="_blank" rel="noreferrer">
+              Открыть в Яндекс Картах
             </a>
           </div>
           <div class="place-panel reveal" aria-label="Детали места">
             <dl>
               <div>
+                <dt>Дата</dt>
+                <dd>5 сентября 2026</dd>
+              </div>
+              <div>
                 <dt>Начало</dt>
                 <dd>16:00</dd>
               </div>
               <div>
-                <dt>Формат</dt>
-                <dd>Церемония и ужин</dd>
-              </div>
-              <div>
-                <dt>Дресс-код</dt>
-                <dd>Вечерний, мягкие природные оттенки</dd>
+                <dt>Адрес</dt>
+                <dd>ул. Красная Пресня, 13</dd>
               </div>
             </dl>
+          </div>
+          <div class="map-panel reveal" aria-label="Карта ресторана Мишель">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%20%D0%9F%D1%80%D0%B5%D1%81%D0%BD%D1%8F%2C%2013%2C%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%9C%D0%B8%D1%88%D0%B5%D0%BB%D1%8C&z=16"
+              title="Ресторан Мишель на Яндекс Картах"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </section>
 
@@ -151,32 +192,32 @@
           <div class="details-grid">
             <article class="detail-card reveal">
               <span>01</span>
-              <h3>Цветовая палитра</h3>
-              <p>Айвори, шалфей, пудровый розовый, теплое золото и глубокий графит.</p>
+              <h3>Стиль</h3>
+              <p>Современный вечерний формат: спокойные цвета, чистые линии, архитектурная графика.</p>
             </article>
             <article class="detail-card reveal">
               <span>02</span>
-              <h3>Подарки</h3>
-              <p>Если захотите нас порадовать, лучшим подарком будет вклад в семейные планы.</p>
+              <h3>Дресс-код</h3>
+              <p>Пока рабочая версия: графит, молочный, шалфей, черный, серебро и приглушенное золото.</p>
             </article>
             <article class="detail-card reveal">
               <span>03</span>
-              <h3>Дети</h3>
-              <p>Формат вечера взрослый, но мы отдельно обсудим исключения с близкими.</p>
+              <h3>Ответ гостей</h3>
+              <p>Сбор информации планируем через Google Forms: присутствие, плюс один, питание и комментарии.</p>
             </article>
           </div>
         </section>
 
-        <section id="rsvp" class="rsvp-section">
-          <div class="rsvp-content reveal">
-            <p class="section-kicker">RSVP</p>
-            <h2>Подтвердите участие до 1 июня</h2>
+        <section id="guest-form" class="guest-form-section">
+          <div class="guest-form-content reveal">
+            <p class="section-kicker">Анкета гостя</p>
+            <h2>Подтвердите участие через Google Форму</h2>
             <p>
-              Напишите нам, сможете ли вы быть рядом в этот день. Позже сюда можно
-              добавить форму Google Forms или собственную форму сбора ответов.
+              Кнопка уже подготовлена под Google Forms. Когда форма будет создана,
+              достаточно заменить ссылку в атрибуте <span class="code-token">href</span>.
             </p>
-            <a class="button primary" href="mailto:hello@example.com?subject=RSVP%20%D0%BD%D0%B0%20%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D1%83">
-              Ответить по почте
+            <a class="button primary" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noreferrer">
+              Открыть Google Форму
             </a>
           </div>
         </section>

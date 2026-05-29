@@ -1,6 +1,9 @@
 const nav = document.querySelector("[data-nav]");
 const revealItems = document.querySelectorAll(".reveal");
 const countdown = document.querySelector("[data-countdown]");
+const googleFormLink = document.querySelector("[data-google-form-link]");
+const googleFormEmbed = document.querySelector("[data-form-embed]");
+const formPlaceholder = document.querySelector("[data-form-placeholder]");
 
 const syncNav = () => {
   nav?.classList.toggle("is-scrolled", window.scrollY > 24);
@@ -48,3 +51,27 @@ window.addEventListener("scroll", syncNav, { passive: true });
 syncNav();
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+const setupGoogleForm = () => {
+  const config = window.WEDDING_SITE_CONFIG || {};
+  const formUrl = config.googleFormUrl || "";
+  const embedUrl = config.googleFormEmbedUrl || "";
+  const hasRealForm = formUrl && !formUrl.includes("REPLACE_WITH");
+
+  if (googleFormLink && hasRealForm) {
+    googleFormLink.href = formUrl;
+    googleFormLink.textContent = "Открыть анкету";
+  } else if (googleFormLink) {
+    googleFormLink.removeAttribute("target");
+    googleFormLink.setAttribute("aria-disabled", "true");
+  }
+
+  if (googleFormEmbed && embedUrl && !embedUrl.includes("REPLACE_WITH")) {
+    const iframe = googleFormEmbed.querySelector("iframe");
+    iframe.src = embedUrl;
+    googleFormEmbed.hidden = false;
+    formPlaceholder?.setAttribute("hidden", "");
+  }
+};
+
+setupGoogleForm();

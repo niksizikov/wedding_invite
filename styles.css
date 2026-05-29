@@ -1,16 +1,19 @@
 :root {
-  --ink: #231f22;
-  --muted: #746b6c;
-  --paper: #fbf4ef;
-  --surface: #fffdf9;
+  --ink: #261b18;
+  --muted: #786962;
+  --paper: #f3eadf;
+  --surface: #fff8ee;
   --veil: rgba(255, 253, 249, 0.72);
   --line: rgba(35, 31, 34, 0.12);
-  --sage: #7f927b;
-  --blush: #d5a59d;
-  --wine: #6b3941;
-  --gold: #c69a57;
-  --charcoal: #1f2023;
-  --white: #fffdf9;
+  --sage: #68734a;
+  --moss: #3f4a1b;
+  --blush: #d8a1a2;
+  --wine: #6e0716;
+  --garnet: #8f1024;
+  --plum: #3a1617;
+  --gold: #c79a48;
+  --charcoal: #201816;
+  --white: #fff8ee;
   --shadow: 0 24px 70px rgba(35, 31, 34, 0.14);
   --radius: 8px;
 }
@@ -28,8 +31,9 @@ body {
   color: var(--ink);
   background:
     linear-gradient(rgba(255, 253, 249, 0.62), rgba(255, 253, 249, 0.62)),
-    radial-gradient(circle at 16% 6%, rgba(213, 165, 157, 0.24), transparent 28%),
-    radial-gradient(circle at 86% 22%, rgba(127, 146, 123, 0.2), transparent 30%),
+    url("assets/mood/paper-texture.jpg") center / 560px auto repeat,
+    radial-gradient(circle at 16% 6%, rgba(143, 16, 36, 0.16), transparent 28%),
+    radial-gradient(circle at 86% 22%, rgba(63, 74, 27, 0.2), transparent 30%),
     var(--paper);
   font-family: "Manrope", Arial, sans-serif;
 }
@@ -69,7 +73,7 @@ a {
 .topbar.is-scrolled {
   padding-block: 14px;
   color: var(--ink);
-  background: rgba(251, 244, 239, 0.9);
+  background: rgba(243, 234, 223, 0.92);
   box-shadow: 0 8px 36px rgba(35, 31, 34, 0.08);
   backdrop-filter: blur(18px);
 }
@@ -135,7 +139,7 @@ a {
 
 .hero-media {
   background:
-    linear-gradient(90deg, rgba(31, 32, 35, 0.78), rgba(31, 32, 35, 0.24) 54%, rgba(31, 32, 35, 0.12)),
+    linear-gradient(90deg, rgba(32, 24, 22, 0.84), rgba(32, 24, 22, 0.2) 56%, rgba(32, 24, 22, 0.08)),
     url("assets/wedding-hero.png") center / cover;
   transform: scale(1.04);
   animation: slow-drift 18s ease-in-out infinite alternate;
@@ -143,8 +147,8 @@ a {
 
 .hero-scrim {
   background:
-    radial-gradient(circle at 20% 24%, rgba(198, 154, 87, 0.28), transparent 30%),
-    linear-gradient(180deg, rgba(31, 32, 35, 0.08), rgba(31, 32, 35, 0.68));
+    radial-gradient(circle at 20% 24%, rgba(199, 154, 72, 0.28), transparent 30%),
+    linear-gradient(180deg, rgba(32, 24, 22, 0.06), rgba(32, 24, 22, 0.72));
 }
 
 .hero-content {
@@ -305,6 +309,14 @@ h3 {
   pointer-events: none;
 }
 
+.hero-celestial {
+  position: absolute;
+  right: clamp(24px, 7vw, 110px);
+  top: 18%;
+  z-index: 1;
+  opacity: 0.7;
+}
+
 .flourish-one {
   right: 8%;
   top: 18%;
@@ -394,8 +406,8 @@ h3 {
 
 .story-section {
   background:
-    radial-gradient(circle at 85% 12%, rgba(213, 165, 157, 0.2), transparent 26%),
-    linear-gradient(135deg, rgba(255, 253, 249, 0.88), rgba(251, 244, 239, 0.74)),
+    radial-gradient(circle at 85% 12%, rgba(143, 16, 36, 0.16), transparent 26%),
+    linear-gradient(135deg, rgba(255, 248, 238, 0.88), rgba(243, 234, 223, 0.74)),
     var(--paper);
 }
 
@@ -421,7 +433,7 @@ h3 {
   color: var(--white);
   background:
     url("assets/botanical/floral-line-1.png") right 8% center / 190px auto no-repeat,
-    linear-gradient(90deg, rgba(107, 57, 65, 0.44), transparent),
+    linear-gradient(90deg, rgba(110, 7, 22, 0.62), transparent),
     var(--charcoal);
 }
 
@@ -493,8 +505,114 @@ h3 {
 
 .schedule-section {
   background:
-    linear-gradient(180deg, rgba(255, 253, 249, 0.78), rgba(251, 244, 239, 0.84)),
+    linear-gradient(180deg, rgba(255, 248, 238, 0.78), rgba(243, 234, 223, 0.84)),
     var(--paper);
+}
+
+.symbols-section {
+  color: var(--white);
+  background:
+    linear-gradient(rgba(38, 27, 24, 0.86), rgba(38, 27, 24, 0.9)),
+    radial-gradient(circle at 18% 22%, rgba(143, 16, 36, 0.35), transparent 32%),
+    radial-gradient(circle at 88% 78%, rgba(63, 74, 27, 0.32), transparent 30%),
+    var(--plum);
+}
+
+.symbols-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1px;
+  background: rgba(255, 248, 238, 0.18);
+}
+
+.symbol-card {
+  min-height: 360px;
+  padding: clamp(28px, 5vw, 56px);
+  background:
+    linear-gradient(135deg, rgba(255, 248, 238, 0.08), transparent 48%),
+    rgba(255, 248, 238, 0.04);
+}
+
+.symbol-card span {
+  display: inline-flex;
+  margin-bottom: 48px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.symbol-card h2 {
+  color: var(--white);
+  font-size: clamp(2.7rem, 5vw, 5.5rem);
+}
+
+.symbol-card p {
+  max-width: 520px;
+  color: rgba(255, 248, 238, 0.76);
+  line-height: 1.8;
+}
+
+.pomegranate-card {
+  background:
+    linear-gradient(135deg, rgba(143, 16, 36, 0.42), transparent 50%),
+    url("assets/mood/vintage-flower-2.png") right -12% bottom -20px / min(52vw, 520px) auto no-repeat,
+    rgba(255, 248, 238, 0.04);
+}
+
+.celestial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.celestial-card .celestial-mark {
+  margin-bottom: 48px;
+}
+
+.celestial-mark {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border: 1px solid rgba(199, 154, 72, 0.72);
+  border-radius: 50%;
+}
+
+.celestial-mark::before,
+.celestial-mark::after {
+  position: absolute;
+  content: "";
+}
+
+.celestial-mark::before {
+  inset: 18px 30px 18px 54px;
+  border: 1px solid rgba(199, 154, 72, 0.9);
+  border-left: 0;
+  border-radius: 0 999px 999px 0;
+}
+
+.celestial-mark::after {
+  top: 50%;
+  left: 50%;
+  width: 188px;
+  height: 1px;
+  background: rgba(199, 154, 72, 0.4);
+  transform: translate(-50%, -50%) rotate(-22deg);
+}
+
+.celestial-mark span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow:
+    0 -44px 0 -7px rgba(199, 154, 72, 0.8),
+    0 44px 0 -7px rgba(199, 154, 72, 0.8),
+    44px 0 0 -7px rgba(199, 154, 72, 0.8),
+    -44px 0 0 -7px rgba(199, 154, 72, 0.8);
+  transform: translate(-50%, -50%);
 }
 
 .timeline-item {
@@ -537,7 +655,7 @@ h3 {
   gap: clamp(34px, 8vw, 110px);
   align-items: center;
   background:
-    radial-gradient(circle at 78% 12%, rgba(127, 146, 123, 0.18), transparent 30%),
+    radial-gradient(circle at 78% 12%, rgba(63, 74, 27, 0.2), transparent 30%),
     var(--paper);
 }
 
@@ -572,7 +690,7 @@ h3 {
   padding: 34px;
   color: var(--white);
   background:
-    linear-gradient(145deg, rgba(107, 57, 65, 0.92), rgba(31, 32, 35, 0.98)),
+    linear-gradient(145deg, rgba(110, 7, 22, 0.92), rgba(32, 24, 22, 0.98)),
     var(--charcoal);
   box-shadow: var(--shadow);
 }
@@ -645,8 +763,8 @@ dd {
   border-radius: var(--radius);
   padding: 28px;
   background:
-    linear-gradient(135deg, rgba(213, 165, 157, 0.13), transparent 40%),
-    #fffdf9;
+    linear-gradient(135deg, rgba(143, 16, 36, 0.1), transparent 40%),
+    #fff8ee;
   transition:
     border-color 220ms ease,
     transform 220ms ease,
@@ -793,7 +911,8 @@ dd {
   }
 
   .timeline,
-  .details-grid {
+  .details-grid,
+  .symbols-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -824,11 +943,12 @@ dd {
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 10px 16px;
-    max-width: 260px;
+    max-width: 250px;
     font-size: 0.7rem;
   }
 
-  .nav-links a[href="#story"] {
+  .nav-links a[href="#story"],
+  .nav-links a[href="#symbols"] {
     display: none;
   }
 
@@ -855,12 +975,14 @@ dd {
 
   .countdown,
   .timeline,
-  .details-grid {
+  .details-grid,
+  .symbols-layout {
     grid-template-columns: 1fr;
   }
 
   .timeline-item,
-  .detail-card {
+  .detail-card,
+  .symbol-card {
     min-height: auto;
   }
 
@@ -890,8 +1012,16 @@ dd {
     display: none;
   }
 
+  .hero-celestial {
+    display: none;
+  }
+
   .botanical-cut {
     opacity: 0.08;
+  }
+
+  .pomegranate-card {
+    background-size: 320px auto;
   }
 
   .form-embed {

@@ -363,14 +363,6 @@ h3 {
   opacity: 0.16;
 }
 
-.botanical-story {
-  top: 32px;
-  right: clamp(12px, 4vw, 70px);
-  width: min(32vw, 280px);
-  height: min(48vw, 420px);
-  background-image: url("assets/botanical/floral-line-2.png");
-}
-
 .botanical-schedule {
   left: clamp(10px, 3vw, 52px);
   bottom: 18px;
@@ -393,13 +385,6 @@ h3 {
 .section > *:not(.botanical-cut) {
   position: relative;
   z-index: 1;
-}
-
-.story-section {
-  background:
-    radial-gradient(circle at 85% 12%, rgba(143, 16, 36, 0.16), transparent 26%),
-    linear-gradient(135deg, rgba(255, 248, 238, 0.88), rgba(243, 234, 223, 0.74)),
-    var(--paper);
 }
 
 .split-layout {
@@ -498,66 +483,6 @@ h3 {
   background:
     linear-gradient(180deg, rgba(255, 248, 238, 0.78), rgba(243, 234, 223, 0.84)),
     var(--paper);
-}
-
-.symbols-section {
-  color: var(--white);
-  background:
-    linear-gradient(rgba(38, 27, 24, 0.86), rgba(38, 27, 24, 0.9)),
-    radial-gradient(circle at 18% 22%, rgba(143, 16, 36, 0.35), transparent 32%),
-    radial-gradient(circle at 88% 78%, rgba(63, 74, 27, 0.32), transparent 30%),
-    var(--plum);
-}
-
-.symbols-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1px;
-  background: rgba(255, 248, 238, 0.18);
-}
-
-.symbol-card {
-  min-height: 360px;
-  padding: clamp(28px, 5vw, 56px);
-  background:
-    linear-gradient(135deg, rgba(255, 248, 238, 0.08), transparent 48%),
-    rgba(255, 248, 238, 0.04);
-}
-
-.symbol-card span {
-  display: inline-flex;
-  margin-bottom: 48px;
-  color: var(--gold);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.symbol-card h2 {
-  color: var(--white);
-  font-size: clamp(2.7rem, 5vw, 5.5rem);
-}
-
-.symbol-card p {
-  max-width: 520px;
-  color: rgba(255, 248, 238, 0.76);
-  line-height: 1.8;
-}
-
-.pomegranate-card {
-  background:
-    linear-gradient(135deg, rgba(143, 16, 36, 0.42), transparent 50%),
-    url("assets/mood/vintage-flower-2.png") right -12% bottom -20px / min(52vw, 520px) auto no-repeat,
-    rgba(255, 248, 238, 0.04);
-}
-
-.celestial-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.celestial-card .celestial-mark {
-  margin-bottom: 48px;
 }
 
 .celestial-mark {
@@ -889,8 +814,7 @@ dd {
   }
 
   .timeline,
-  .details-grid,
-  .symbols-layout {
+  .details-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -925,11 +849,6 @@ dd {
     font-size: 0.7rem;
   }
 
-  .nav-links a[href="#story"],
-  .nav-links a[href="#symbols"] {
-    display: none;
-  }
-
   .hero {
     min-height: 96svh;
     padding: 112px 18px 64px;
@@ -957,14 +876,12 @@ dd {
 
   .countdown,
   .timeline,
-  .details-grid,
-  .symbols-layout {
+  .details-grid {
     grid-template-columns: 1fr;
   }
 
   .timeline-item,
-  .detail-card,
-  .symbol-card {
+  .detail-card {
     min-height: auto;
   }
 
@@ -1000,10 +917,6 @@ dd {
 
   .botanical-cut {
     opacity: 0.08;
-  }
-
-  .pomegranate-card {
-    background-size: 320px auto;
   }
 
   .form-embed {

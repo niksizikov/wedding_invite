@@ -1,13 +1,8 @@
-const nav = document.querySelector("[data-nav]");
 const revealItems = document.querySelectorAll(".reveal");
 const countdown = document.querySelector("[data-countdown]");
 const googleFormLink = document.querySelector("[data-google-form-link]");
 const googleFormEmbed = document.querySelector("[data-form-embed]");
 const formPlaceholder = document.querySelector("[data-form-placeholder]");
-
-const syncNav = () => {
-  nav?.classList.toggle("is-scrolled", window.scrollY > 24);
-};
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -19,13 +14,13 @@ const revealObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.16,
-    rootMargin: "0px 0px -40px 0px",
+    threshold: 0.12,
+    rootMargin: "0px 0px -30px 0px",
   },
 );
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index * 45, 260)}ms`;
+  item.style.transitionDelay = `${Math.min(index * 55, 260)}ms`;
   revealObserver.observe(item);
 });
 
@@ -47,8 +42,6 @@ const updateCountdown = () => {
   countdown.querySelector("[data-seconds]").textContent = pad(seconds);
 };
 
-window.addEventListener("scroll", syncNav, { passive: true });
-syncNav();
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
@@ -60,7 +53,7 @@ const setupGoogleForm = () => {
 
   if (googleFormLink && hasRealForm) {
     googleFormLink.href = formUrl;
-    googleFormLink.textContent = "Открыть анкету";
+    googleFormLink.textContent = "Заполнить анкету";
   } else if (googleFormLink) {
     googleFormLink.removeAttribute("target");
     googleFormLink.setAttribute("aria-disabled", "true");

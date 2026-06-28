@@ -8,9 +8,8 @@
   --wine-deep: #50030d;
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
-  --script: "Marck Script", "Segoe Script", cursive;
+  --script: "English111 Vivace BT", "English111 Vivace", "Popular Script", "Popular-Script", "Marck Script", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Manrope", Arial, sans-serif;
 }
 
 * {
@@ -153,25 +152,6 @@ h1 .name-line {
   word-break: break-word;
 }
 
-.script-title {
-  margin: -0.08em 0 18px;
-  color: var(--wine);
-  font-family: var(--script);
-  font-size: clamp(2.2rem, 7vw, 4.8rem);
-  line-height: 0.9;
-}
-
-.date-pill {
-  margin: 0;
-  padding: 9px 18px;
-  color: #fffaf0;
-  background: var(--wine);
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .script-heading {
   margin-bottom: 12px;
   color: var(--wine);
@@ -274,7 +254,7 @@ h1 .name-line {
 
 .mini-calendar span {
   color: var(--muted);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 0.7rem;
   font-weight: 800;
 }
@@ -284,7 +264,7 @@ h1 .name-line {
   display: grid;
   min-height: 38px;
   place-items: center;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-style: normal;
   font-weight: 700;
 }
@@ -310,7 +290,7 @@ h1 .name-line {
   padding: 10px 22px;
   color: #fffaf0;
   background: var(--wine);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -453,12 +433,9 @@ h1 .name-line {
   min-height: 76px;
   place-items: center;
   border: 1px solid rgba(118, 8, 23, 0.18);
-  background:
-    linear-gradient(rgba(255, 250, 240, 0.78), rgba(255, 250, 240, 0.78)),
-    url("assets/botanical/floral-line-2.png") center / 140px auto no-repeat,
-    var(--paper-warm);
+  background: var(--paper-warm);
   color: var(--muted);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 0.66rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -559,15 +536,11 @@ h1 .name-line {
     margin-block: -0.08em;
   }
 
-  .date-pill {
-    font-size: 0.68rem;
-  }
-
   .intro p:not(.script-heading),
   .guest-form p:not(.script-heading),
   .dress-code p,
   .place-block p {
-    max-width: min(310px, calc(100vw - 72px));
+    max-width: min(280px, calc(100vw - 96px));
     margin-inline: auto;
   }
 

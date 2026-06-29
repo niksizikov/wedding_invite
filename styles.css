@@ -23,6 +23,7 @@
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
   --script: "AlayaRoza", cursive;
+  --date-font: "English111 Vivace BT", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -201,9 +202,25 @@ h1 .name-line {
   display: grid;
   margin: 0 auto 26px;
   color: var(--wine);
-  font-family: var(--script);
+  font-family: var(--date-font);
   font-size: clamp(4rem, 12vw, 7.2rem);
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
   line-height: 0.62;
+}
+
+.date,
+.wedding-date,
+.date-block,
+.date-stack,
+.date-stack span,
+.date-day,
+.date-month,
+.date-year,
+.date-number {
+  font-family: var(--date-font);
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
 }
 
 .intro h2,
@@ -404,8 +421,10 @@ h1 .name-line {
 .road-stop time {
   display: block;
   color: var(--wine);
-  font-family: var(--script);
+  font-family: var(--date-font);
   font-size: 2.1rem;
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
   line-height: 0.9;
 }
 
@@ -474,9 +493,10 @@ h1 .name-line {
 .countdown strong {
   display: block;
   color: var(--wine);
-  font-family: var(--script);
+  font-family: var(--date-font);
   font-size: 2.55rem;
   font-weight: 400;
+  font-variant-numeric: lining-nums;
   line-height: 0.9;
 }
 

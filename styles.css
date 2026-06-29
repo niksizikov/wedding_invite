@@ -154,6 +154,7 @@ h1 {
 
 h1 .ampersand {
   color: var(--wine);
+  font-family: var(--date-font);
   font-size: 0.76em;
   line-height: 0.68;
 }
@@ -161,17 +162,25 @@ h1 .ampersand {
 .label,
 h1,
 h1 .name-line,
-h1 .ampersand,
 .hero-title,
 .names,
 .couple-names,
 .couple-names span,
 .groom-name,
-.bride-name,
-.ampersand {
+.bride-name {
   font-family: "AlayaRoza", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.hero h1 .ampersand,
+.label .vivace-mark {
+  font-family: var(--date-font);
+}
+
+.label .vivace-mark {
+  font-size: 0.88em;
+  line-height: 1;
 }
 
 h1 .name-line {
@@ -324,6 +333,10 @@ h1 .name-line {
 
 .place-block {
   text-align: center;
+}
+
+.place-block .script-heading {
+  font-size: clamp(2.7rem, 8vw, 4.8rem);
 }
 
 .button {

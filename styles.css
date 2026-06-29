@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "Alaya Roza Demo";
+  font-family: "AlayaRoza";
   src: url("AlayaRozaDemo.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -20,7 +22,7 @@
   --wine-deep: #50030d;
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
-  --script: "Alaya Roza Demo", "English111 Vivace BT", cursive;
+  --script: "AlayaRoza", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -153,6 +155,22 @@ h1 .ampersand {
   color: var(--wine);
   font-size: 0.76em;
   line-height: 0.68;
+}
+
+.label,
+h1,
+h1 .name-line,
+h1 .ampersand,
+.hero-title,
+.names,
+.couple-names,
+.couple-names span,
+.groom-name,
+.bride-name,
+.ampersand {
+  font-family: "AlayaRoza", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 .name-line {

@@ -1,4 +1,10 @@
 @font-face {
+  font-family: "Alaya Roza Demo";
+  src: url("AlayaRozaDemo.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "English111 Vivace BT";
   src: url("english-111-vivace-bt.ttf") format("truetype");
   font-display: swap;
@@ -14,7 +20,7 @@
   --wine-deep: #50030d;
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
-  --script: "English111 Vivace BT", cursive;
+  --script: "Alaya Roza Demo", "English111 Vivace BT", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
 }
 

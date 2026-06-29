@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Alaya Roza Demo";
+  src: url("AlayaRozaDemo.otf") format("opentype");
+  font-display: swap;
+}
+
 :root {
   --ink: #1c130f;
   --muted: #4f453f;
@@ -8,7 +14,7 @@
   --wine-deep: #50030d;
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
-  --script: "English111 Vivace BT", "English111 Vivace", "Popular Script", "Popular-Script", "Marck Script", cursive;
+  --script: "Alaya Roza Demo", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
 }
 

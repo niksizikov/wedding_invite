@@ -1,14 +1,8 @@
 @font-face {
-  font-family: "AlayaRoza";
-  src: url("AlayaRozaDemo.otf") format("opentype");
+  font-family: "Annabelle Cyr";
+  src: url("Annabelle Cyr.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "English111 Vivace BT";
-  src: url("english-111-vivace-bt.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -22,8 +16,8 @@
   --wine-deep: #50030d;
   --champagne: #d7bf9c;
   --shadow: 0 28px 82px rgba(45, 18, 10, 0.16);
-  --script: "AlayaRoza", cursive;
-  --date-font: "English111 Vivace BT", cursive;
+  --script: "Annabelle Cyr", cursive;
+  --date-font: "Annabelle Cyr", cursive;
   --serif: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -168,7 +162,7 @@ h1 .name-line,
 .couple-names span,
 .groom-name,
 .bride-name {
-  font-family: "AlayaRoza", cursive;
+  font-family: var(--script);
   font-weight: 400;
   font-style: normal;
 }
@@ -616,9 +610,7 @@ h1 .name-line {
   }
 
   .route {
-    left: 24px;
-    height: 720px;
-    transform: none;
+    display: none;
   }
 
   .road-stop,

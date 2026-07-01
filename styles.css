@@ -98,8 +98,7 @@ p {
 .calendar-place,
 .roadmap-section,
 .guest-details,
-.guest-form,
-.gift-section {
+.guest-form {
   position: relative;
   z-index: 1;
 }
@@ -241,7 +240,6 @@ h1 .name-line {
 .place-block p,
 .dress-code p,
 .guest-form p:not(.script-heading),
-.gift-section p:not(.script-heading),
 .road-stop p {
   color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.18rem);
@@ -249,8 +247,7 @@ h1 .name-line {
 }
 
 .intro p:not(.script-heading),
-.guest-form p:not(.script-heading),
-.gift-section p:not(.script-heading) {
+.guest-form p:not(.script-heading) {
   max-width: 590px;
   margin-inline: auto;
 }
@@ -465,8 +462,7 @@ h1 .name-line {
 
 .dress-code,
 .countdown-block,
-.guest-form,
-.gift-section {
+.guest-form {
   text-align: center;
 }
 
@@ -513,13 +509,6 @@ h1 .name-line {
   font-weight: 400;
   font-variant-numeric: lining-nums;
   line-height: 0.9;
-}
-
-.gift-section {
-  max-width: 620px;
-  margin: 0 auto;
-  padding: clamp(34px, 7vw, 68px) 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .guest-form {
@@ -610,7 +599,6 @@ h1 .name-line {
 
   .intro p:not(.script-heading),
   .guest-form p:not(.script-heading),
-  .gift-section p:not(.script-heading),
   .dress-code p,
   .place-block p {
     max-width: min(280px, calc(100vw - 96px));
